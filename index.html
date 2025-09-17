@@ -5,14 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>핸드폰 랜딩페이지</title>
-    <link rel="stylesheet" href="./assets/css/reset.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
     <!-- 랜딩페이지 코딩 시작 -->
 
-    <header></header>
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">
+                <img src="./assets/images/logo1.jpg" alt="">
+            </h1>
+            <!-- 햄버거 버튼. 모바일에서만 보이게 -->
+            <button type="button" class="hamburger-btn">버튼</button>
+            <nav class="header-nav">
+                <button class="close-btn">X</button>
+                <ul class="header-menu">
+                    <li>서비스소개</li>
+                    <li>상품소개</li>
+                    <li>상담문의</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <!-- kv 영역 -->
@@ -53,6 +69,24 @@
             </div>
         </section>
     </main>
+
+    <footer></footer>
+
+
+
+    <script>
+        let btn = document.querySelector(".hamburger-btn");
+        let menu = document.querySelector(".header-nav");
+
+        let closeBtn = document.querySelector(".close-btn");
+        btn.addEventListener('click', function () {
+            menu.classList.add("on");
+        })
+
+        closeBtn.addEventListener('click', function () {
+            menu.classList.remove("on");
+        })
+    </script>
 </body>
 
 </html>

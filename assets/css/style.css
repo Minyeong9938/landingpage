@@ -1,1 +1,59 @@
 @import url(../css/reset.min.css);
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header 영역 */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-menu {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+}
+
+.hamburger-btn {
+    display: none;
+}
+
+
+
+
+
+.kv-sec {
+    height: 50vh;
+    background-color: bisque;
+}
+
+
+@media(max-width: 1024px) {
+    .hamburger-btn {
+        display: block;
+    }
+
+    .header-nav {
+        position: absolute;
+        top: 37px;
+        width: 100%;
+        background-color: #f0f0f0;
+        border: 1px solid #000;
+        left: 0;
+        display: none;
+    }
+
+    .header-nav.on {
+        display: block;
+    }
+
+    .header-menu {
+        flex-direction: column;
+    }
+}
