@@ -2,37 +2,20 @@
 
 html,
 body {
-    position: relative;
-    height: 100%;
+    color: #202020;
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
+a {
+    text-decoration: none;
 }
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #444;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+p {
+    line-height: 1.8;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+h4 {
+    line-height: 1.5;
 }
-
-.swiper {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
 
 .container {
     width: 100%;
@@ -46,12 +29,20 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    width: 100%;
+    height: 70px;
 }
 
 .header-menu {
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
+    gap: 233px;
     list-style-type: none;
+}
+
+.header-menu>li>a {
+    text-decoration: none;
+    color: #202020;
 }
 
 .hamburger-btn {
@@ -62,10 +53,568 @@ body {
     display: none;
 }
 
+.logo a {
+    display: block;
+}
+
+.logo img {
+    height: 70px;
+}
+
+/* kv 영역 */
 
 .kv-sec {
-    height: 50vh;
-    background-color: bisque;
+    min-height: 50vh;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(152, 134, 255, 0.3), rgba(201, 226, 255, 0.3));
+}
+
+.kv-sec>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kv-text {
+    padding: 10px 0;
+}
+
+
+.kv-title {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.kv-desc {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.kv-btn-sec {
+    display: flex;
+}
+
+.kv-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.kv-btn-sec {
+    display: flex;
+    gap: 15px;
+}
+
+.kv-image img {
+    max-height: 100%;
+    width: auto;
+    display: block;
+}
+
+.kv-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    /* border: 2px solid transparent; */
+    box-sizing: border-box;
+}
+
+.btn-right {
+    background-color: #9886FF;
+    color: #fff;
+}
+
+.btn-left {
+    background-color: #C9E2FF;
+    color: #202020;
+}
+
+.kv-btn.btn-right:hover {
+    background-color: #6449ff;
+    /* border-color: #9886FF; */
+    /* color: #202020; */
+}
+
+.kv-btn.btn-left:hover {
+    background-color: #6ab0ff;
+    /* border-color: #C9E2FF; */
+}
+
+
+/* about 영역 */
+
+.about-sec {
+    margin-top: 120px;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-title {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about-subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.about-card-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.about-card-item {
+    background-color: #F4F4F4;
+    width: calc((100% - 22px) / 2);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-card-text {
+    margin-left: 45px;
+}
+
+.about-card-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about-card-subtitle {
+    font-size: 15px;
+}
+
+
+/* worry 영역 */
+
+.worry {
+    width: 100%;
+    height: 528px;
+    background: linear-gradient(to right, #9886FF, #C9E2FF);
+    margin-top: 130px;
+}
+
+.worry-title {
+    font-size: 42px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+.worry-box {
+    background-color: rgb(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.worry-box-wrap {
+    position: relative;
+    height: 298px;
+}
+
+.worry-box1 {
+    width: 526px;
+    height: 128px;
+    border-radius: 65px 65px 0 65px;
+    position: absolute;
+    left: 10%;
+    top: 0%;
+}
+
+.worry-box2 {
+    width: 490px;
+    height: 128px;
+    border-radius: 65px 65px 65px 0;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+}
+
+.worry-box3 {
+    width: 604px;
+    height: 146px;
+    border-radius: 65px 65px 0 65px;
+    position: absolute;
+    left: 20%;
+    top: 55%;
+}
+
+.worry-box-text {
+    padding: 20px;
+}
+
+.worry-box-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6A68E0;
+    margin-bottom: 10px;
+}
+
+.worry-box-subtitle {
+    font-size: 14px;
+}
+
+
+/* 구매방식 */
+
+/* about 영역 */
+
+.buy-sec {
+    margin-top: 120px;
+}
+
+.buy-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.buy-title {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.buy-card-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.buy-card-item {
+    background-color: #F4F4F4;
+    width: calc((100% - 22px) / 2);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-card-text {
+    margin-left: 45px;
+}
+
+.buy-card-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.buy-card-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.buy-card-desc1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4845E9;
+    margin-bottom: 10px;
+}
+
+.buy-card-desc2 {
+    font-size: 12px;
+    color: #B9B9B9;
+}
+
+
+/* procedure */
+.pro-box-wrap {
+    display: flex;
+    gap: 20px;
+}
+
+.pro-box {
+    background-color: #F4F4F4;
+    width: calc((100% - 80px) / 5);
+    border-radius: 20px;
+}
+
+.pro-text {
+    text-align: center;
+    margin: 130px 0 50px;
+}
+
+.pro-title {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.pro-box {
+    text-align: center;
+}
+
+.pro-box-text {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 40px;
+}
+
+
+/* product */
+/* 탭 */
+.tab-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+}
+
+.tab-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-btn-group {
+    position: relative;
+    display: flex;
+    background-color: #F4F4F4;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.tab-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.333%;
+    height: 100%;
+    background-color: #6A68E0;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px 0;
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    z-index: 1;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.tab-btn.active {
+    color: #fff;
+}
+
+
+/* 박스 */
+.product-box-wrap {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-box {
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    flex: 0 0 calc((100% - 40px) / 3);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+.product-text {
+    text-align: center;
+}
+
+.product-text-title {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.product-text-title>span {
+    font-size: 14px;
+}
+
+.product-text-price {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.product-text-sub {
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.product-text-desc {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.product-text-desc>span {
+    color: #6A68E0;
+}
+
+.product-btn {
+    background-color: #6A68E0;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border-radius: 30px;
+}
+
+.product-btn:hover {
+    background-color: #2a2699;
+}
+
+.product-btn-text {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* review */
+.review {
+    width: 100%;
+    position: relative;
+}
+
+.review-text {
+    text-align: center;
+    margin: 130px 0 50px;
+}
+
+.review-title {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.swiper {
+    position: relative;
+    width: 100%;
+}
+
+.swiper-slide {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review-box {
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    flex: 0 0 calc((100% - 40px) / 3);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #6A68E0;
+}
+
+.review .swiper-button-prev {
+    left: calc(50% - 650px);
+}
+
+
+.review .swiper-button-next {
+    right: calc(50% - 650px);
+}
+
+.review .swiper-button-next,
+.review .swiper-button-prev {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-70%);
+    z-index: 10;
+}
+
+.review-box img {
+    margin-bottom: 10px;
+}
+
+.review-name {
+    font-size: 16px;
+    color: #5E5E5E;
+    margin-bottom: 10px;
+}
+
+.review-desc {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.star1,
+.star2 {
+    font-size: 12px;
+}
+
+/* fast */
+
+.fast {
+    width: 100%;
+    height: 707px;
+    background: linear-gradient(to left, #9886FF, #C9E2FF);
+    margin-top: 130px;
+}
+
+.fast-title {
+    padding-top: 40px;
+    font-size: 42px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.fast-box {
+    width: 706px;
+    background: #fff;
+    margin: 30px auto 80px;
 }
 
 
@@ -94,5 +643,33 @@ body {
 
     .close-btn {
         display: block;
+    }
+}
+
+@media(max-width: 768px) {
+    .kv-sec>.container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .kv-text {
+        margin-bottom: 30px;
+    }
+
+    .kv-image img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .kv-btn-sec {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .kv-text {
+        align-items: center;
+        text-align: center;
     }
 }
