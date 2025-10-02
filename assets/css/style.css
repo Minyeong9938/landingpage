@@ -1,8 +1,17 @@
 @import url(../css/reset.min.css);
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
-    color: #202020;
+    color: #222222;
+}
+
+body.menu-open {
+    overflow: hidden;
+    height: 100vh;
 }
 
 a {
@@ -10,11 +19,19 @@ a {
 }
 
 p {
-    line-height: 1.8;
+    line-height: 1.3;
+}
+
+h2 {
+    line-height: 1.3;
+}
+
+h3 {
+    line-height: 1.3;
 }
 
 h4 {
-    line-height: 1.5;
+    line-height: 1.3;
 }
 
 .container {
@@ -24,6 +41,19 @@ h4 {
 }
 
 /* header 영역 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+body {
+    padding-top: 70px;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -36,7 +66,7 @@ h4 {
 .header-menu {
     display: flex;
     justify-content: space-between;
-    gap: 233px;
+    gap: 150px;
     list-style-type: none;
 }
 
@@ -60,6 +90,22 @@ h4 {
 .logo img {
     height: 70px;
 }
+
+.hamburger-btn {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    color: #6ab0ff;
+    font-size: 24px;
+}
+
+.header-menu li:hover a {
+    color: #6A68E0;
+    font-weight: 700;
+}
+
 
 /* kv 영역 */
 
@@ -108,9 +154,10 @@ h4 {
 }
 
 .kv-image img {
-    max-height: 100%;
-    width: auto;
+    max-width: 600px;
+    width: 100%;
     display: block;
+    transition: width 0.5s ease-in-out;
 }
 
 .kv-btn {
@@ -145,7 +192,6 @@ h4 {
     background-color: #6ab0ff;
     /* border-color: #C9E2FF; */
 }
-
 
 /* about 영역 */
 
@@ -228,6 +274,24 @@ h4 {
     align-items: flex-start;
     padding: 0 20px;
     box-sizing: border-box;
+    position: relative;
+}
+
+.buy-emoji01 {
+    position: absolute;
+    right: 120px;
+    top: -26px;
+}
+
+.buy-emoji02 {
+    position: absolute;
+    right: 100px;
+    top: -23px;
+}
+
+.buy-emoji03 {
+    position: absolute;
+    left: 30px;
 }
 
 .worry-box-wrap {
@@ -264,6 +328,10 @@ h4 {
 
 .worry-box-text {
     padding: 20px;
+}
+
+.worry-box-text03 {
+    margin-left: 100px;
 }
 
 .worry-box-title {
@@ -430,21 +498,29 @@ h4 {
 }
 
 
-/* 박스 */
-.product-box-wrap {
+/* Product 섹션 스타일 */
+.product {
+    position: relative;
+}
+
+/* 기존 product-box-wrap을 대체하는 productSwiper 스타일 */
+.productSwiper {
+    width: 100%;
     margin-top: 50px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 .product-box {
     background-color: #F4F4F4;
     border-radius: 10px;
-    flex: 0 0 calc((100% - 40px) / 3);
+    /* 기존 flex 속성 제거: Swiper가 너비를 제어합니다. */
+    width: 100%;
     box-sizing: border-box;
     text-align: center;
     padding: 20px;
+}
+
+.product-box img {
+    margin-bottom: 20px;
 }
 
 .product-text {
@@ -466,9 +542,14 @@ h4 {
     padding-bottom: 20px;
 }
 
+.product-text-price del {
+    color: #6A68E0;
+}
+
 .product-text-sub {
     font-size: 16px;
     padding-bottom: 20px;
+    color: #B9B9B9;
 }
 
 .product-text-desc {
@@ -485,7 +566,6 @@ h4 {
     background-color: #6A68E0;
     color: #fff;
     padding: 10px 20px;
-    margin-top: 20px;
     border-radius: 5px;
     display: inline-block;
     border-radius: 30px;
@@ -500,7 +580,7 @@ h4 {
     font-weight: 500;
 }
 
-/* review */
+/* review 섹션 스타일 */
 .review {
     width: 100%;
     position: relative;
@@ -516,12 +596,14 @@ h4 {
     font-weight: 600;
 }
 
-.swiper {
+.reviewSwiper {
     position: relative;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.swiper-slide {
+.reviewSwiper .swiper-slide {
     width: 100%;
     text-align: center;
     font-size: 18px;
@@ -531,41 +613,54 @@ h4 {
     gap: 20px;
 }
 
-.swiper {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .review-box {
     background-color: #F4F4F4;
     border-radius: 10px;
     box-sizing: border-box;
     text-align: center;
     padding: 20px;
-    flex: 0 0 calc((100% - 40px) / 3);
+    /* 기존 flex 속성 제거: Swiper가 너비를 제어합니다. */
+    width: 100%;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+/* Swiper 네비게이션 버튼 분리 및 위치 조정 */
+
+/* 모든 Swiper 버튼 공통 스타일 (기존 swiper-button-next/prev 스타일을 대체) */
+.product-next,
+.product-prev,
+.review-next,
+.review-prev {
     color: #6A68E0;
+    position: absolute;
+    z-index: 10;
 }
 
-.review .swiper-button-prev {
+/* Product 네비게이션 위치 */
+.productSwiper+.product-arrow .product-prev {
+    top: 60%;
+    transform: translateY(-60%);
     left: calc(50% - 650px);
 }
 
-
-.review .swiper-button-next {
+.productSwiper+.product-arrow .product-next {
+    top: 60%;
+    transform: translateY(-60%);
     right: calc(50% - 650px);
 }
 
-.review .swiper-button-next,
-.review .swiper-button-prev {
-    position: absolute;
+/* Review 네비게이션 위치 */
+.reviewSwiper+.review-arrow .review-prev {
     top: 70%;
     transform: translateY(-70%);
-    z-index: 10;
+    left: calc(50% - 650px);
 }
+
+.reviewSwiper+.review-arrow .review-next {
+    top: 70%;
+    transform: translateY(-70%);
+    right: calc(50% - 650px);
+}
+
 
 .review-box img {
     margin-bottom: 10px;
@@ -598,7 +693,7 @@ h4 {
 
 .fast {
     width: 100%;
-    height: 707px;
+    height: 700px;
     background: linear-gradient(to left, #9886FF, #C9E2FF);
     margin-top: 130px;
 }
@@ -612,25 +707,116 @@ h4 {
 }
 
 .fast-box {
-    width: 706px;
+    width: 700px;
     background: #fff;
     margin: 30px auto 80px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.fast-box form {
+    padding: 60px 90px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f5f5f7;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #A192FF;
+}
+
+.agree-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.agree-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #A192FF;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-group button {
+    width: 100%;
+    border: 0;
+    background-color: #A192FF;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.form-group button:hover {
+    background-color: #6A68E0;
 }
 
 
 @media(max-width: 1024px) {
+
+    /* header */
+    body.menu-open::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9;
+    }
+
     .hamburger-btn {
         display: block;
     }
 
     .header-nav {
         position: absolute;
-        top: 37px;
-        width: 100%;
-        background-color: #f0f0f0;
-        border: 1px solid #000;
-        left: 0;
+        top: 0;
+        right: 0;
+        width: 40vw;
+        height: 100vh;
+        background-color: rgba(106, 104, 224, 0.9);
         display: none;
+        z-index: 10;
+        padding: 20px 0 45px;
+        box-sizing: border-box;
+        z-index: 10;
     }
 
     .header-nav.on {
@@ -639,10 +825,77 @@ h4 {
 
     .header-menu {
         flex-direction: column;
+        font-size: 18px;
+        gap: 70px;
+        align-items: center;
+        padding-top: 80px;
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .header-menu li {
+        width: 100%;
+    }
+
+    .header-menu li a {
+        color: #fff;
+        display: block;
+        padding: 30px 0;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .header-menu li:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .header-menu li:hover a {
+        color: #fff;
+        font-weight: 400;
     }
 
     .close-btn {
         display: block;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        padding: 0;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 24px;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
+
+
+    /* kv */
+    .kv-sec>.container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .kv-text {
+        margin: 0 auto 30px auto;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .kv-image {
+        margin: 0 auto;
+        width: max-content;
+    }
+
+    .kv-image img {
+        width: 80%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .kv-btn-sec {
+        justify-content: center;
     }
 }
 
@@ -654,22 +907,18 @@ h4 {
     }
 
     .kv-text {
-        margin-bottom: 30px;
+        margin: 0 auto 30px auto;
+        width: 100%;
     }
 
     .kv-image img {
-        width: 80%;
-        max-width: 300px;
+        width: 75%;
+        max-width: 450px;
     }
 
     .kv-btn-sec {
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
-    }
-
-    .kv-text {
-        align-items: center;
-        text-align: center;
     }
 }
