@@ -1,29 +1,29 @@
+// 햄버거
 let btn = document.querySelector(".hamburger-btn");
 let menu = document.querySelector(".header-nav");
-let closeBtn = document.querySelector(".close-btn");
 
 const body = document.body;
-
 let menuLinks = document.querySelectorAll(".header-menu li a");
+let btnIcon = btn.querySelector('i');
 
-btn.addEventListener('click', function () {
-    menu.classList.add("on");
-    body.classList.add("menu-open");
-});
+function toggleMenu() {
+    menu.classList.toggle("on");
+    body.classList.toggle("menu-open");
 
-closeBtn.addEventListener('click', function () {
-    menu.classList.remove("on");
-    body.classList.remove("menu-open");
-});
+    if (menu.classList.contains("on")) {
+        btnIcon.classList.replace("fa-bars", "fa-xmark");
+    } else {
+        btnIcon.classList.replace("fa-xmark", "fa-bars");
+    }
+}
+
+btn.addEventListener('click', toggleMenu);
 
 menuLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-        menu.classList.remove("on");
-        body.classList.remove("menu-open");
-    });
+    link.addEventListener('click', toggleMenu);
 });
 
-
+// 탭버튼
 const tabs = document.querySelectorAll('.tab-btn');
 const slider = document.querySelector('.tab-slider');
 
@@ -38,18 +38,7 @@ tabs.forEach((tab, idx) => {
     });
 });
 
-
-var reviewSwiper = new Swiper(".reviewSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        nextEl: ".review-next",
-        prevEl: ".review-prev",
-    }
-});
-
-
+// 슬라이더
 var productSwiper = new Swiper(".productSwiper", {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -57,9 +46,30 @@ var productSwiper = new Swiper(".productSwiper", {
     navigation: {
         nextEl: ".product-next",
         prevEl: ".product-prev",
+    },
+    pagination: {
+        el: ".product-swiper-pagination",
     }
 });
 
+var reviewSwiper = new Swiper(".reviewSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".review-next",
+        prevEl: ".review-prev",
+    },
+    pagination: {
+        el: ".review-swiper-pagination",
+    }
+});
+
+// 폼
 $(function () {
     $("#fastform").on("submit", function (e) {
         e.preventDefault();

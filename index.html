@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>핸드폰 랜딩페이지</title>
+    <title>페이백폰나라</title>
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -25,9 +27,6 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
             <nav class="header-nav">
-                <button class="close-btn">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
                 <ul class="header-menu">
                     <li><a href="#buy-section">구매방식</a></li>
                     <li><a href="#procedure-section">구매절차</a></li>
@@ -57,7 +56,7 @@
                     </div>
                 </div>
                 <div class="kv-image">
-                    <div class="phone-img">
+                    <div class="phone-img animate__animated animate__pulse animate__infinite">
                         <img src="./assets/images/handphone.png" alt="phone">
                     </div>
                 </div>
@@ -75,7 +74,7 @@
                 </div>
                 <div class="about-card">
                     <div class="about-card-wrap">
-                        <div class="about-card-item">
+                        <div class="about-card-item" data-aos="fade-right" data-aos-duration="1500">
                             <div class="about-icon">
                                 <img src="./assets/images/icon1.png" alt="">
                             </div>
@@ -89,7 +88,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="about-card-item">
+                        <div class="about-card-item" data-aos="fade-left" data-aos-duration="1500">
                             <div class="about-icon">
                                 <img src="./assets/images/icon2.png" alt="">
                             </div>
@@ -98,8 +97,7 @@
                                     허위구매<img src="./assets/images/icon3.png" alt="">
                                 </h4>
                                 <p class="about-card-subtitle">
-                                    내구재, 깡 소액대출 등등 현금만을 <br>
-                                    목적으로 불법 개통 적발 시 법적대응
+                                    현금을 목적으로 <br>불법 개통 시 법적대응
                                 </p>
                             </div>
                         </div>
@@ -116,7 +114,7 @@
                     <h2>이런 고민 없으신가요?</h2>
                 </div>
                 <div class="worry-box-wrap">
-                    <div class="worry-box worry-box1">
+                    <div class="worry-box worry-box1" data-aos="fade-up" data-aos-duration="1500">
                         <div class="worry-box-text">
                             <h4 class="worry-box-title">
                                 # 스마트폰 가격이 부담이신 분
@@ -126,11 +124,11 @@
                                 매일 정직한 시세를 표기하는 페이백 폰나라에서
                             </p>
                         </div>
-                        <div class="buy-emoji buy-emoji01">
+                        <div class="worry-emoji worry-emoji01">
                             <img src="./assets/images/emoji01.png" alt="">
                         </div>
                     </div>
-                    <div class="worry-box worry-box2">
+                    <div class="worry-box worry-box2" data-aos="fade-up" data-aos-duration="2000">
                         <div class="worry-box-text">
                             <h4 class="worry-box-title">
                                 # 부가서비스 강요가 싫으신 분
@@ -140,21 +138,21 @@
                                 요금이 올라가는 것에 지치신 분은 페이백 폰나라에서
                             </p>
                         </div>
-                        <div class="buy-emoji buy-emoji02">
+                        <div class="worry-emoji worry-emoji02">
                             <img src="./assets/images/emoji02.png" alt="">
                         </div>
                     </div>
-                    <div class="worry-box worry-box3">
+                    <div class="worry-box worry-box3" data-aos="fade-up" data-aos-duration="2500">
                         <div class="worry-box-text worry-box-text03">
                             <h4 class="worry-box-title">
-                                # 안전한 곳에서 구매하고 싶으신 분
+                                # 안전하게 구매하고 싶으신 분
                             </h4>
                             <p class="worry-box-subtitle">
                                 단통법 폐지로 인해 업체들마다 지원금이 달라져<br>
                                 과장된 지원금으로 인해 손해를 보기 싫으신 분은 페이백 폰나라에서
                             </p>
                         </div>
-                        <div class="buy-emoji buy-emoji03">
+                        <div class="worry-emoji worry-emoji03">
                             <img src="./assets/images/emoji03.png" alt="">
                         </div>
                     </div>
@@ -169,12 +167,12 @@
         <section class="buy-sec">
             <div class="container">
                 <div class="buy-text">
-                    <h3 class="about-title">
+                    <h3 class="buy-title">
                         구매방식 알아보기</h3>
                 </div>
                 <div class="buy-card">
                     <div class="buy-card-wrap">
-                        <div class="buy-card-item">
+                        <div class="buy-card-item" data-aos="fade-right" data-aos-duration="1500">
                             <div class="buy-icon">
                                 <img src="./assets/images/icon4.png" alt="">
                             </div>
@@ -194,7 +192,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="buy-card-item">
+                        <div class="buy-card-item" data-aos="fade-left" data-aos-duration="1500">
                             <div class="buy-icon">
                                 <img src="./assets/images/icon5.png" alt="">
                             </div>
@@ -230,376 +228,29 @@
                         구매절차 알아보기</h3>
                 </div>
                 <div class="pro-box-wrap">
-                    <div class="pro-box">
+                    <div class="pro-box" data-aos="fade-up" data-aos-duration="1000">
                         <img src="./assets/images/icon6.png" alt="">
                         <h4 class="pro-box-text">전화상담,<br>간편신청서</h4>
                     </div>
-                    <div class="pro-box">
+                    <div class="pro-box" data-aos="fade-up" data-aos-duration="1500">
                         <img src="./assets/images/icon7.png" alt="">
                         <h4 class="pro-box-text">공식신청서<br>작성</h4>
                     </div>
-                    <div class="pro-box">
+                    <div class="pro-box" data-aos="fade-up" data-aos-duration="2000">
                         <img src="./assets/images/icon8.png" alt="">
                         <h4 class="pro-box-text">구매 단말기<br>발송</h4>
                     </div>
-                    <div class="pro-box">
+                    <div class="pro-box" data-aos="fade-up" data-aos-duration="2500">
                         <img src="./assets/images/icon9.png" alt="">
                         <h4 class="pro-box-text">단말기<br>개통진행</h4>
                     </div>
-                    <div class="pro-box">
+                    <div class="pro-box" data-aos="fade-up" data-aos-duration="3000">
                         <img src="./assets/images/icon10.png" alt="">
                         <h4 class="pro-box-text">개통 후기<br>작성</h4>
                     </div>
                 </div>
             </div>
         </section>
-
-
-
-        <!-- product -->
-        <!-- <section class="product">
-            <div class="container">
-                <div class="tab-container">
-                    <div class="tab-wrapper">
-                        <div class="tab-btn-group">
-                            <div class="tab-slider"></div>
-                            <button class="tab-btn active">SKT</button>
-                            <button class="tab-btn">KT</button>
-                            <button class="tab-btn">U+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-box-wrap">
-                    <div class="product-box">
-                        <img src="./assets/images/phone1.png" alt="">
-                        <div class="product-text">
-                            <p class="product-text-title">갤럭시S25
-                                <br><span>(256GB)</span>
-                            </p>
-                            <p class="product-text-price">출고가 : <del>1,155,000</del></p>
-                            <p class="product-text-sub">프리미엄 109,000 요금제 기준</p>
-                            <p class="product-text-desc">번호이동 <span>110만원</span> 지급<br>
-                                기기변경<span> 70만원 </span>지급</p>
-                        </div>
-                        <a class="product-btn" href="#">
-                            <div class="product-btn-text">
-                                간편신청서
-                            </div>
-                        </a>
-                    </div>
-                    <div class="product-box">
-                        <img src="./assets/images/phone2.png" alt="">
-                        <div class="product-text">
-                            <p class="product-text-title">갤럭시Z플립7
-                                <br><span>(256GB)</span>
-                            </p>
-                            <p class="product-text-price">출고가 : <del>1,485,000</del></p>
-                            <p class="product-text-sub">프리미엄 109,000 요금제 기준</p>
-                            <p class="product-text-desc">번호이동 <span>98만원</span> 지급<br>
-                                기기변경<span> 82만원 </span>지급</p>
-                        </div>
-                        <a class="product-btn" href="#">
-                            <div class="product-btn-text">
-                                간편신청서
-                            </div>
-                        </a>
-                    </div>
-                    <div class="product-box">
-                        <img src="./assets/images/phone3.png" alt="">
-                        <div class="product-text">
-                            <p class="product-text-title">갤럭시Z폴드
-                                <br><span>(256GB)</span>
-                            </p>
-                            <p class="product-text-price">출고가 : <del>1,155,000</del></p>
-                            <p class="product-text-sub">프리미엄 109,000 요금제 기준</p>
-                            <p class="product-text-desc">번호이동 <span>86만원</span> 지급<br>
-                                기기변경<span> 71만원 </span>지급</p>
-                        </div>
-                        <a class="product-btn" href="#">
-                            <div class="product-btn-text">
-                                간편신청서
-                            </div>
-                        </a>
-                    </div>
-                    <div class="product-box">
-                        <img src="./assets/images/phone4.png" alt="">
-                        <div class="product-text">
-                            <p class="product-text-title">갤럭시S25울트라
-                                <br><span>(256GB)</span>
-                            </p>
-                            <p class="product-text-price">출고가 : <del>1,698,400</del></p>
-                            <p class="product-text-sub">프리미엄 109,000 요금제 기준</p>
-                            <p class="product-text-desc">번호이동 <span>110만원</span> 지급<br>
-                                기기변경<span> 74만원 </span>지급</p>
-                        </div>
-                        <a class="product-btn" href="#">
-                            <div class="product-btn-text">
-                                간편신청서
-                            </div>
-                        </a>
-                    </div>
-                    <div class="product-box">
-                        <img src="./assets/images/phone5.png" alt="">
-                        <div class="product-text">
-                            <p class="product-text-title">아이폰16
-                                <br><span>(128GB)</span>
-                            </p>
-                            <p class="product-text-price">출고가 : <del>1,155,000</del></p>
-                            <p class="product-text-sub">프리미엄 109,000 요금제 기준</p>
-                            <p class="product-text-desc">번호이동 <span>120만원</span> 지급<br>
-                                기기변경<span> 64만원 </span>지급</p>
-                        </div>
-                        <a class="product-btn" href="#">
-                            <div class="product-btn-text">
-                                간편신청서
-                            </div>
-                        </a>
-                    </div>
-                    <div class="product-box">
-                        <img src="./assets/images/phone6.png" alt="">
-                        <div class="product-text">
-                            <p class="product-text-title">아이폰16프로
-                                <br><span>(128GB)</span>
-                            </p>
-                            <p class="product-text-price">출고가 : <del>1,154,000</del></p>
-                            <p class="product-text-sub">프리미엄 109,000 요금제 기준</p>
-                            <p class="product-text-desc">번호이동 <span>120만원</span> 지급<br>
-                                기기변경<span> 70만원 </span>지급</p>
-                        </div>
-                        <a class="product-btn" href="#">
-                            <div class="product-btn-text">
-                                간편신청서
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- <section class="review">
-            <div class="container">
-                <div class="review-text">
-                    <h3 class="review-title">
-                        이달의 리뷰</h3>
-                </div>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="review-box">
-                                <img src="./assets/images/face1.png" alt="">
-                                <div class="review-box-text">
-                                    <p class="review-name">
-                                        김*남
-                                    </p>
-                                    <p class="review-desc">
-                                        아이폰 16 싸게 사서 좋았어요!<br>
-                                        여러군데 비교하다가 싸게 구했습니다~
-                                    </p>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review-box">
-                                <img src="./assets/images/face2.png" alt="">
-                                <div class="review-box-text">
-                                    <p class="review-name">
-                                        윤*희
-                                    </p>
-                                    <p class="review-desc">
-                                        갤럭시S25 울트라 110만원 지원받았습니다!<br>
-                                        앞으로 폰 구매할때는 폰나라에서!!
-                                    </p>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.0
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star4.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            5.0
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star5.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review-box">
-                                <img src="./assets/images/face3.png" alt="">
-                                <div class="review-box-text">
-                                    <p class="review-name">
-                                        김*영
-                                    </p>
-                                    <p class="review-desc">
-                                        구매과정이 불편함 없이 좋았어요!<br>
-                                        다른 사람들보다 싸게 샀습니다!
-                                    </p>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            4.0
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star4.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="review-box">
-                                <img src="./assets/images/face4.png" alt="">
-                                <div class="review-box-text">
-                                    <p class="review-name">
-                                        김*남
-                                    </p>
-                                    <p class="review-desc">
-                                        아이폰 16 싸게 사서 좋았어요!<br>
-                                        여러군데 비교하다가 싸게 구했습니다~
-                                    </p>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review-box">
-                                <img src="./assets/images/face5.png" alt="">
-                                <div class="review-box-text">
-                                    <p class="review-name">
-                                        김*남
-                                    </p>
-                                    <p class="review-desc">
-                                        아이폰 16 싸게 사서 좋았어요!<br>
-                                        여러군데 비교하다가 싸게 구했습니다~
-                                    </p>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review-box">
-                                <img src="./assets/images/face6.png" alt="">
-                                <div class="review-box-text">
-                                    <p class="review-name">
-                                        김*남
-                                    </p>
-                                    <p class="review-desc">
-                                        아이폰 16 싸게 사서 좋았어요!<br>
-                                        여러군데 비교하다가 싸게 구했습니다~
-                                    </p>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-arrow">
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-            </div>
-        </section> -->
 
         <!-- 여유 공간 섹션 -->
         <section id="product-section"></section>
@@ -742,17 +393,14 @@
                     <div class="swiper-button-next product-next"></div>
                     <div class="swiper-button-prev product-prev"></div>
                 </div>
-
+                <div class="product-swiper-pagination"></div>
             </div>
         </section>
-
-        ---
 
         <section class="review">
             <div class="container">
                 <div class="review-text">
-                    <h3 class="review-title">
-                        이달의 리뷰</h3>
+                    <h3 class="review-title">이달의 리뷰</h3>
                 </div>
 
                 <div class="swiper reviewSwiper">
@@ -762,102 +410,66 @@
                             <div class="review-box">
                                 <img src="./assets/images/face1.png" alt="">
                                 <div class="review-box-text">
-                                    <p class="review-name">
-                                        김*남
-                                    </p>
+                                    <p class="review-name">김*남</p>
                                     <p class="review-desc">
-                                        아이폰 16 싸게 사서 좋았어요!<br>
-                                        여러군데 비교하다가 싸게 구했습니다~
+                                        싸게 사서 좋았어요!<br>
+                                        다른곳보다 싸게 구했어요~
                                     </p>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 과정</div>
+                                        <div class="star2">4.5</div>
+                                        <div class="star3"><img src="./assets/images/star45.png" alt=""></div>
                                     </div>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 이후 만족도</div>
+                                        <div class="star2">4.5</div>
+                                        <div class="star3"><img src="./assets/images/star45.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="swiper-slide">
                             <div class="review-box">
                                 <img src="./assets/images/face2.png" alt="">
                                 <div class="review-box-text">
-                                    <p class="review-name">
-                                        윤*희
-                                    </p>
+                                    <p class="review-name">윤*희</p>
                                     <p class="review-desc">
-                                        갤럭시S25 울트라 110만원 지원받았습니다!<br>
-                                        앞으로 폰 구매할때는 폰나라에서!!
+                                        갤럭시S25 110만원 지원!<br>
+                                        폰 구매할때는 폰나라에서!!
                                     </p>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.0
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star4.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 과정</div>
+                                        <div class="star2">4.0</div>
+                                        <div class="star3"><img src="./assets/images/star4.png" alt=""></div>
                                     </div>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            5.0
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star5.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 이후 만족도</div>
+                                        <div class="star2">5.0</div>
+                                        <div class="star3"><img src="./assets/images/star5.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="swiper-slide">
                             <div class="review-box">
                                 <img src="./assets/images/face3.png" alt="">
                                 <div class="review-box-text">
-                                    <p class="review-name">
-                                        김*영
-                                    </p>
+                                    <p class="review-name">김*영</p>
                                     <p class="review-desc">
-                                        구매과정이 불편함 없이 좋았어요!<br>
-                                        다른 사람들보다 싸게 샀습니다!
+                                        과정 불편함 없이 좋았어요!<br>
+                                        싸게 샀습니다!
                                     </p>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 과정</div>
+                                        <div class="star2">4.5</div>
+                                        <div class="star3"><img src="./assets/images/star45.png" alt=""></div>
                                     </div>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            4.0
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star4.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 이후 만족도</div>
+                                        <div class="star2">4.0</div>
+                                        <div class="star3"><img src="./assets/images/star4.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
@@ -867,102 +479,66 @@
                             <div class="review-box">
                                 <img src="./assets/images/face4.png" alt="">
                                 <div class="review-box-text">
-                                    <p class="review-name">
-                                        김*남
-                                    </p>
+                                    <p class="review-name">김*남</p>
                                     <p class="review-desc">
-                                        아이폰 16 싸게 사서 좋았어요!<br>
-                                        여러군데 비교하다가 싸게 구했습니다~
+                                        갤럭시S25 110만원 지원!<br>
+                                        폰 구매할때는 폰나라에서!!
                                     </p>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 과정</div>
+                                        <div class="star2">4.5</div>
+                                        <div class="star3"><img src="./assets/images/star45.png" alt=""></div>
                                     </div>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 이후 만족도</div>
+                                        <div class="star2">4.5</div>
+                                        <div class="star3"><img src="./assets/images/star45.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="swiper-slide">
                             <div class="review-box">
                                 <img src="./assets/images/face5.png" alt="">
                                 <div class="review-box-text">
-                                    <p class="review-name">
-                                        김*남
-                                    </p>
+                                    <p class="review-name">김*남</p>
                                     <p class="review-desc">
-                                        아이폰 16 싸게 사서 좋았어요!<br>
-                                        여러군데 비교하다가 싸게 구했습니다~
+                                        갤럭시S25 110만원 지원!<br>
+                                        폰 구매할때는 폰나라에서!!
                                     </p>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 과정</div>
+                                        <div class="star2">4.5</div>
+                                        <div class="star3"><img src="./assets/images/star45.png" alt=""></div>
                                     </div>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 이후 만족도</div>
+                                        <div class="star2">4.5</div>
+                                        <div class="star3"><img src="./assets/images/star45.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="swiper-slide">
                             <div class="review-box">
                                 <img src="./assets/images/face6.png" alt="">
                                 <div class="review-box-text">
-                                    <p class="review-name">
-                                        김*남
-                                    </p>
+                                    <p class="review-name">김*남</p>
                                     <p class="review-desc">
-                                        아이폰 16 싸게 사서 좋았어요!<br>
-                                        여러군데 비교하다가 싸게 구했습니다~
+                                        갤럭시S25 110만원 지원!<br>
+                                        폰 구매할때는 폰나라에서!!
                                     </p>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 과정
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 과정</div>
+                                        <div class="star2">4.5</div>
+                                        <div class="star3"><img src="./assets/images/star45.png" alt=""></div>
                                     </div>
                                     <div class="star">
-                                        <div class="star1">
-                                            개통 이후 만족도
-                                        </div>
-                                        <div class="star2">
-                                            4.5
-                                        </div>
-                                        <div class="star3">
-                                            <img src="./assets/images/star45.png" alt="">
-                                        </div>
+                                        <div class="star1">개통 이후 만족도</div>
+                                        <div class="star2">4.5</div>
+                                        <div class="star3"><img src="./assets/images/star45.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
@@ -970,14 +546,13 @@
 
                     </div>
                 </div>
-
                 <div class="swiper-arrow review-arrow">
                     <div class="swiper-button-next review-next"></div>
                     <div class="swiper-button-prev review-prev"></div>
                 </div>
+                <div class="review-swiper-pagination"></div>
             </div>
         </section>
-
 
         <section class="fast" id="fast-section" class="contact-form">
             <div class="container">
@@ -1038,10 +613,41 @@
     </main>
 
     <footer class="footer">
-
+        <div class="container">
+            <div class="footer-text">
+                <div class="time">
+                    <a href="#">365일 연중무휴</a>
+                    <a href="#">오전 09시부터 저녁 10시까지</a>
+                </div>
+                <div class="footer-txt">
+                    <a href="#">페이백폰나라 대표이사 김준</a>
+                    <a href="#">사업자등록번호 518-05-01451</a><br>
+                    <a href="#">본사 충남 천안시 서북구 불당21로 67-12 (신불당동)</a>
+                    <a href="#">대표번호 1577-1015</a><br>
+                    <a href="#">주요 법적고지</a>
+                    <a href="#">사전승낙서</a>
+                    <a href="#">콘텐츠 도용시 민/형사상 처벌 및 손해배상 청구</a><br>
+                    <a href="#">통신신고필증 제 2025-충남천안-1760호</a>
+                </div>
+                <div class="information">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">이메일무단수집거부</a>
+                    <a href="#">법적고지</a>
+                </div>
+                <div class="copyright">
+                    <a href="#">Copyright @ 2019 ~ [현재] 페이백폰나라 모든 권리 보유
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 
+
     <script src="https://kit.fontawesome.com/76f79174b9.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); 
+    </script>
     <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
