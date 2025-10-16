@@ -198,13 +198,14 @@ body {
 
 .kv-title {
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 15px;
 }
 
 .kv-desc {
     font-size: 24px;
     margin-bottom: 30px;
+    font-weight: 600;
 }
 
 .kv-btn-sec {
@@ -268,7 +269,7 @@ body {
 
 .about-title {
     font-size: 42px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
@@ -276,6 +277,7 @@ body {
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 50px;
+    font-weight: 600;
 }
 
 .about-card-wrap {
@@ -333,7 +335,7 @@ body {
 
 .worry-title {
     font-size: 42px;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
     text-align: center;
     padding: 130px 0 50px;
@@ -435,7 +437,7 @@ body {
 
 .buy-title {
     font-size: 42px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .buy-card-wrap {
@@ -513,7 +515,7 @@ body {
 
 .pro-title {
     font-size: 42px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .pro-box {
@@ -586,6 +588,7 @@ body {
 
 .tab-btn.active {
     color: #fff;
+    font-weight: 600;
 }
 
 .product {
@@ -709,6 +712,7 @@ body {
     position: absolute;
     cursor: pointer;
     z-index: 10;
+    font-weight: 600;
 }
 
 .skt-next,
@@ -754,7 +758,7 @@ body {
 
 .review-title {
     font-size: 42px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .reviewSwiper {
@@ -833,6 +837,7 @@ body {
     color: #6A68E0;
     position: absolute;
     z-index: 10;
+    font-weight: 600;
 }
 
 /* fast */
@@ -848,7 +853,7 @@ body {
     padding-top: 130px;
     font-size: 42px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -936,6 +941,12 @@ select:focus {
 .footer {
     margin: 40px 0;
     line-height: 1.5;
+}
+
+.footer-logo a {
+    display: block;
+    width: 147px;
+    height: 38px;
 }
 
 .footer-text>div {
@@ -1387,7 +1398,7 @@ select:focus {
     }
 
     .buy-card-text {
-        margin-left: 10px;
+        margin-left: 0;
     }
 
     .buy-card-desc1 {
@@ -1423,6 +1434,10 @@ select:focus {
 
     .product-text-title {
         font-size: 16px;
+    }
+
+    .product-text-title span {
+        font-size: 12px;
     }
 
     .product-text-price {
@@ -1474,6 +1489,10 @@ select:focus {
     /* footer */
     .footer-text>div {
         padding: 0;
+    }
+
+    .footer-list li a {
+        margin-right: 10px;
     }
 
     .footer-text {
@@ -1671,6 +1690,10 @@ select:focus {
         font-size: 14px;
     }
 
+    .product-text-title span {
+        font-size: 10px;
+    }
+
     .product-text-price {
         font-size: 16px;
     }
@@ -1727,6 +1750,10 @@ select:focus {
     }
 
     /* footer */
+    .footer-list li a {
+        margin-right: 5px;
+    }
+
     .footer-logo img {
         width: 100px;
     }
