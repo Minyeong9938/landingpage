@@ -106,7 +106,9 @@ $(function () {
             productSwiperInstances[targetIndex].update();
             productSwiperInstances[targetIndex].el.resize();
             productSwiperInstances[targetIndex].slideTo(0);
+
         }
+
     });
 
     // 폼
