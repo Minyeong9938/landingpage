@@ -23,34 +23,42 @@ menuLinks.forEach(function (link) {
     link.addEventListener('click', toggleMenu);
 });
 
-// 탭버튼
-const tabs = document.querySelectorAll('.tab-btn');
-const slider = document.querySelector('.tab-slider');
-
-tabs.forEach((tab, idx) => {
-    tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        const width = tab.offsetWidth;
-        slider.style.width = `${width}px`;
-        slider.style.left = `${tab.offsetLeft}px`;
-    });
-});
 
 // 슬라이더
-var productSwiper = new Swiper(".productSwiper", {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-        nextEl: ".product-next",
-        prevEl: ".product-prev",
-    },
-    pagination: {
-        el: ".product-swiper-pagination",
-    }
-});
+let productSwiperInstances = [];
+
+function initProductSwipers() {
+    const swiperElements = document.querySelectorAll('.tab-contents .productSwiper');
+
+    swiperElements.forEach((element, index) => {
+        let nextEl, prevEl, paginationEl;
+
+        if (index === 0) {
+            nextEl = ".skt-next"; prevEl = ".skt-prev"; paginationEl = ".skt-pagination";
+        } else if (index === 1) {
+            nextEl = ".kt-next"; prevEl = ".kt-prev"; paginationEl = ".kt-pagination";
+        } else {
+            nextEl = ".uplus-next"; prevEl = ".uplus-prev"; paginationEl = ".uplus-pagination";
+        }
+
+        const swiperOptions = {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: nextEl,
+                prevEl: prevEl,
+            },
+            pagination: {
+                el: paginationEl,
+                clickable: true,
+            }
+        };
+
+        const swiper = new Swiper(element, swiperOptions);
+        productSwiperInstances[index] = swiper;
+    });
+}
 
 var reviewSwiper = new Swiper(".reviewSwiper", {
     slidesPerView: 3,
@@ -69,8 +77,39 @@ var reviewSwiper = new Swiper(".reviewSwiper", {
     }
 });
 
-// 폼
+// 제이쿼리
 $(function () {
+    initProductSwipers();
+
+    $('.tab-btn').on('click', function () {
+
+        const $this = $(this);
+        const targetIndex = $this.data('index');
+
+        // 탭 버튼 스타일, 슬라이더 이동
+        $('.tab-btn').removeClass('active');
+        $this.addClass('active');
+
+        const width = $this.outerWidth();
+        const left = $this.position().left;
+
+        $('.tab-slider').css({ 'width': width + 'px', 'left': left + 'px' });
+
+        // 탭 내용 전환
+        $('.tab-contents .tab-content').addClass('hidden').removeClass('active');
+        $('.tab-contents .tab-content[data-content-index="' + targetIndex + '"]').removeClass('hidden').addClass('active');
+
+        $('.product-controls > div[data-index]').addClass('hidden');
+        $('.product-controls > div[data-index="' + targetIndex + '"]').removeClass('hidden');
+
+        if (productSwiperInstances[targetIndex]) {
+            productSwiperInstances[targetIndex].update();
+            productSwiperInstances[targetIndex].el.resize();
+            productSwiperInstances[targetIndex].slideTo(0);
+        }
+    });
+
+    // 폼
     $("#fastform").on("submit", function (e) {
         e.preventDefault();
 
