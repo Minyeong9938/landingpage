@@ -1559,7 +1559,7 @@ select:focus {
     }
 
     .pro-box>img {
-        width: 100px;
+        width: 80px;
     }
 
     /* product */
@@ -1609,15 +1609,7 @@ select:focus {
         flex-direction: column;
     }
 
-    .review-text {
-        margin-top: 195px;
-    }
-
     /* form */
-    .fast {
-        margin-top: 195px;
-    }
-
     .fast-title {
         font-size: 24px;
     }
@@ -1634,10 +1626,14 @@ select:focus {
     }
 
     /* footer */
+    .time {
+        font-size: 12px;
+    }
+
     .footer-txt,
     .information,
     .copyright {
-        font-size: 12px;
+        font-size: 8px;
     }
 
     .time>a:not(:last-child),
