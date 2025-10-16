@@ -1234,6 +1234,10 @@ select:focus {
         font-size: 18px;
     }
 
+    .phone img {
+        width: 20px;
+    }
+
     /* review */
     .review-title {
         font-size: 36px;
@@ -1633,6 +1637,11 @@ select:focus {
 
     .product-btn-text {
         font-size: 12px;
+    }
+
+    .phone img {
+        width: 15px;
+        margin-bottom: 15px;
     }
 
     /* review */
