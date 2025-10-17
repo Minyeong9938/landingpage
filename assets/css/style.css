@@ -551,13 +551,11 @@ body {
 }
 
 /* product */
-.product-text {
-    margin-top: 100px;
-}
-
 .product-title {
+    margin-top: 100px;
     font-weight: 700;
     font-size: 42px;
+    text-align: center;
 }
 
 /* 탭 */
@@ -1474,13 +1472,10 @@ select:focus {
     }
 
     /* product */
-    .product-text {
-        margin-top: 80px;
-    }
-
     .product-title {
         font-weight: 700;
         font-size: 32px;
+        margin-top: 80px;
     }
 
     .tab-container {
@@ -1778,12 +1773,9 @@ select:focus {
         box-sizing: border-box;
     }
 
-    .product-text {
-        margin-top: 60px;
-    }
-
     .product-title {
         font-size: 24px;
+        margin-top: 60px;
     }
 
     .tab-container {
