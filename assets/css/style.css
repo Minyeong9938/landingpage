@@ -1505,6 +1505,15 @@ select:focus {
         font-size: 30px;
     }
 
+    .reviewSwiper+.review-arrow .review-prev {
+        left: 6%;
+    }
+
+    .reviewSwiper+.review-arrow .review-next {
+
+        right: 6%;
+    }
+
     /* form */
     .fast {
         margin-top: 80px;
