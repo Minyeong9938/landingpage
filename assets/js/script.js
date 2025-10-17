@@ -34,11 +34,11 @@ function initProductSwipers() {
         let nextEl, prevEl, paginationEl;
 
         if (index === 0) {
-            nextEl = ".skt-next"; prevEl = ".skt-prev"; paginationEl = ".skt-pagination";
+            paginationEl = ".skt-pagination";
         } else if (index === 1) {
-            nextEl = ".kt-next"; prevEl = ".kt-prev"; paginationEl = ".kt-pagination";
+            paginationEl = ".kt-pagination";
         } else {
-            nextEl = ".uplus-next"; prevEl = ".uplus-prev"; paginationEl = ".uplus-pagination";
+            paginationEl = ".uplus-pagination";
         }
 
         const swiperOptions = {
@@ -65,15 +65,12 @@ var reviewSwiper = new Swiper(".reviewSwiper", {
     spaceBetween: 20,
     loop: true,
     autoplay: {
-        delay: 2000,
+        delay: 1500,
         disableOnInteraction: false,
     },
     navigation: {
         nextEl: ".review-next",
         prevEl: ".review-prev",
-    },
-    pagination: {
-        el: ".review-swiper-pagination",
     }
 });
 

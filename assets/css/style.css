@@ -1040,7 +1040,7 @@ select:focus {
         flex-direction: row-reverse;
         justify-content: space-evenly;
         align-items: center;
-        width: clamp(300px, 75%, 700px);
+        width: clamp(300px, 100%, 700px);
         padding: 2vw;
         height: 135px;
         box-sizing: border-box;
@@ -1375,10 +1375,6 @@ select:focus {
     .worry-title {
         font-size: 32px;
         padding-top: 80px;
-    }
-
-    .worry-box {
-        width: clamp(300px, 80%, 700px);
     }
 
     .worry-box-title {
