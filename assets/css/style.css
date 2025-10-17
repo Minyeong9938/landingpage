@@ -150,6 +150,11 @@ body {
     color: #fff;
 }
 
+.menu-box:hover a {
+    background-color: #A192FF;
+    color: #fff;
+}
+
 .close-btn {
     display: none;
 }
@@ -172,7 +177,7 @@ body {
     font-size: 24px;
 }
 
-.header-menu li:hover a {
+.header-menu li:hover:not(:last-child) a {
     color: #6449ff;
     font-weight: 700;
 }
