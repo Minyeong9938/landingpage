@@ -721,36 +721,7 @@ body {
     transform: scale(1.1);
 }
 
-/* product 화살표, 페이지네이션 */
-.skt-next,
-.skt-prev,
-.kt-next,
-.kt-prev,
-.uplus-next,
-.uplus-prev {
-    color: #6A68E0;
-    position: absolute;
-    cursor: pointer;
-    z-index: 10;
-    font-weight: 600;
-}
-
-.skt-next,
-.kt-next,
-.uplus-next {
-    top: 60%;
-    transform: translateY(-60%);
-    right: calc(50% - 650px);
-}
-
-.skt-prev,
-.kt-prev,
-.uplus-prev {
-    top: 60%;
-    transform: translateY(-60%);
-    left: calc(50% - 650px);
-}
-
+/* 페이지네이션 */
 .skt-control-group.hidden,
 .kt-control-group.hidden,
 .uplus-control-group.hidden {
@@ -763,7 +734,6 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-
 
 /* review */
 .review {
@@ -779,23 +749,6 @@ body {
 .review-title {
     font-size: 42px;
     font-weight: 700;
-}
-
-.reviewSwiper {
-    position: relative;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.reviewSwiper .swiper-slide {
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
 }
 
 .review-box {
@@ -834,10 +787,20 @@ body {
     font-size: 12px;
 }
 
-/* review 화살표 페이지네이션 */
-.review-swiper-pagination {
+/* review 화살표 */
+.reviewSwiper {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reviewSwiper .swiper-slide {
+    width: 100%;
     text-align: center;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .reviewSwiper+.review-arrow .review-prev {
@@ -1018,15 +981,13 @@ select:focus {
 
 
 @media (max-width: 1300px) {
-
-    /* swiper 가리기 */
-    .swiper-arrow {
-        display: none;
+    .reviewSwiper+.review-arrow .review-prev {
+        left: 3%;
     }
 
-    .review-next,
-    .review-prev {
-        display: none;
+    .reviewSwiper+.review-arrow .review-next {
+
+        right: 3%;
     }
 }
 
@@ -1532,6 +1493,16 @@ select:focus {
 
     .review-title {
         font-size: 32px;
+    }
+
+    .review-next,
+    .review-prev {
+        font-size: 30px;
+    }
+
+    .review-next:after,
+    .review-prev::after {
+        font-size: 30px;
     }
 
     /* form */
