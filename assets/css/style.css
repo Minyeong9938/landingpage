@@ -1003,6 +1003,17 @@ select:focus {
     .swiper-arrow {
         display: none;
     }
+
+    .skt-next,
+    .skt-prev,
+    .kt-next,
+    .kt-prev,
+    .uplus-next,
+    .uplus-prev,
+    .review-next,
+    .review-prev {
+        display: none;
+    }
 }
 
 @media(max-width: 1200px) {
