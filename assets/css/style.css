@@ -164,10 +164,6 @@ body {
     display: block;
 }
 
-.logo img {
-    height: 70px;
-}
-
 .hamburger-btn {
     border: none;
     background-color: transparent;
