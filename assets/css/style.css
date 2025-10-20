@@ -1537,6 +1537,10 @@ select:focus {
     }
 
     /* footer */
+    .footer-logo img {
+        width: 120px;
+    }
+
     .footer-text>div {
         padding: 0;
     }
@@ -1842,6 +1846,10 @@ select:focus {
     }
 
     /* footer */
+    .footer-logo img {
+        width: 100px;
+    }
+
     .footer-list li a {
         margin-right: 5px;
     }
