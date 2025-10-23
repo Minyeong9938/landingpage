@@ -138,6 +138,7 @@ html,
 body {
     color: #222222;
     font-family: 'Pretendard';
+    word-break: keep-all;
 }
 
 a {
