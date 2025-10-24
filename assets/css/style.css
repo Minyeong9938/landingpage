@@ -984,6 +984,7 @@ select:focus {
     color: #fff;
     padding: 15px 0;
     border-radius: 10px;
+    font-size: 16px;
 }
 
 .form-group button:hover {
@@ -1405,6 +1406,10 @@ select:focus {
         font-size: 32px;
     }
 
+    .about-subtitle {
+        margin-bottom: 30px;
+    }
+
     .about-card-text {
         margin-left: 0;
         text-align: center;
@@ -1429,6 +1434,7 @@ select:focus {
     .worry-title {
         font-size: 32px;
         padding-top: 80px;
+        padding-bottom: 30px;
     }
 
     .worry-box-title {
@@ -1468,6 +1474,10 @@ select:focus {
         width: 100px;
     }
 
+    .buy-text {
+        margin-bottom: 30px;
+    }
+
     .buy-title {
         font-size: 32px;
     }
@@ -1493,6 +1503,10 @@ select:focus {
         width: calc((100% - 40px) / 3);
     }
 
+    .pro-text {
+        margin-bottom: 30px;
+    }
+
     .pro-title {
         font-size: 32px;
     }
@@ -1513,13 +1527,8 @@ select:focus {
     }
 
     .tab-container {
-        margin-top: 50px;
+        margin-top: 30px;
     }
-
-    /* .productSwiper .swiper-slide {
-        width: 50% !important;
-        box-sizing: border-box;
-    } */
 
     .product-box>img {
         height: 130px;
@@ -1552,6 +1561,7 @@ select:focus {
     /* review */
     .review-text {
         margin-top: 80px;
+        margin-bottom: 30px;
     }
 
     .reviewSwiper .swiper-slide {
@@ -1849,10 +1859,6 @@ select:focus {
         margin-top: 60px;
     }
 
-    .tab-container {
-        margin-top: 50px;
-    }
-
     .tab-btn {
         font-size: 16px;
     }
@@ -1934,9 +1940,14 @@ select:focus {
         font-size: 14px;
     }
 
-    .time {
-        font-size: 16px;
-        font-weight: 600;
+    .form-group button {
+        padding: 12px 0;
+        font-size: 14px;
+    }
+
+    .agree-label input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
     }
 
     /* footer */
