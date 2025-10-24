@@ -42,7 +42,7 @@ function initProductSwipers() {
         }
 
         const swiperOptions = {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 20,
             loop: true,
             navigation: {
@@ -52,7 +52,21 @@ function initProductSwipers() {
             pagination: {
                 el: paginationEl,
                 clickable: true,
-            }
+            },
+            breakpoints: {
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
         };
 
         const swiper = new Swiper(element, swiperOptions);
