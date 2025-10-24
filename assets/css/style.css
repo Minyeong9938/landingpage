@@ -244,22 +244,13 @@ body {
 
 
 /* kv */
-.phone-img.animate__pulse {
-    --animate-duration: 3s;
-}
-
-.animate__pulse {
-    --animate-duration: 2s;
-}
-
 .kv-sec {
     min-height: 50vh;
     padding: 60px 0;
     display: flex;
     align-items: center;
-    /* background: linear-gradient(rgba(152, 134, 255, 0.3), rgba(201, 226, 255, 0.3)); */
     background-image: url("../images/kv-img.jpg");
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -311,6 +302,21 @@ body {
     width: 100%;
     display: block;
     transition: width 0.5s ease-in-out;
+    animation: floatUpDown 3.5s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .kv-btn {
@@ -898,6 +904,10 @@ body {
     width: 100%;
     height: auto;
     background: #706ee9;
+    /* background-image: url("../images/form.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover; */
     margin-top: 100px;
     padding-bottom: 100px;
 }
@@ -1361,6 +1371,10 @@ select:focus {
 @media(max-width: 768px) {
 
     /* kv */
+    .kv-sec {
+        background-position: center;
+    }
+
     .kv-sec>.container {
         flex-direction: column;
         align-items: center;
