@@ -1588,23 +1588,18 @@ select:focus {
     }
 
     /* form */
+    form {
+        gap: 10px;
+    }
+
     .form-group select {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-
-        /* ------------------------------------- */
-        /* ✅ 커스텀 스타일 및 배경 화살표 추가 */
-        /* ------------------------------------- */
-        /* 만약 배경색, 폰트 크기, 패딩 등이 있다면 이곳에 추가하세요. */
-
-        /* 커스텀 화살표를 추가하려면 (선택 사항) */
         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="%23000000" stroke-width="2" d="M6 9l6 6 6-6"/></svg>');
         background-repeat: no-repeat;
         background-position: right 10px center;
-        /* 오른쪽 10px 여백에 배치 */
         padding-right: 30px;
-        /* 화살표 공간 확보 */
     }
 
     .fast {
@@ -1927,6 +1922,10 @@ select:focus {
     .fast-title {
         font-size: 24px;
         padding-top: 60px;
+    }
+
+    form {
+        gap: 5px;
     }
 
     input,
